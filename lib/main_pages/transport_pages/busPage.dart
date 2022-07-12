@@ -52,7 +52,11 @@ class _BusPageState extends State<BusPage> {
             padding: EdgeInsets.only(left: 15, bottom: 15),
             child: Text("Denne side indeholder flere forskellige udtryk som en buschauffør vil blive udsat for i sit daglige virke.", style: TextStyle(color: Colors.grey),),
           ),
-          ExpansionTile(title: Text("Busstopsted"), subtitle: Text("Hvad indeholder et busstopsted?"),children: <Widget>[ListTile(title: Text('This is tile number 1')),],),
+          ExpansionTile(leading: Icon(Icons.info_outline), title: Text("Buschauffør"), subtitle: Text("Hvad er en buschauffør?"),children: <Widget>[ListTile(title: Text('Information omkring buschauffør.')),],),
+          ExpansionTile(leading: Icon(Icons.info_outline), title: Text("Busstopsted"), subtitle: Text("Hvad indeholder et busstopsted?"),children: <Widget>[ListTile(title: Text('This is tile number 2')),],),
+          ExpansionTile(leading: Icon(Icons.info_outline), title: Text("Billet"), subtitle: Text("Hvad er en billet?"),children: <Widget>[ListTile(title: Text('This is tile number 2')),],),
+          ExpansionTile(leading: Icon(Icons.info_outline), title: Text("Rejsekort"), subtitle: Text("Hvad er et rejsekort?"),children: <Widget>[ListTile(title: Text('This is tile number 2')),],),
+          ExpansionTile(leading: Icon(Icons.info_outline), title: Text("Sæde"), subtitle: Text("Hvad er en sæde?"),children: <Widget>[ListTile(title: Text('This is tile number 2')),],),
         ],
       ),
     );
