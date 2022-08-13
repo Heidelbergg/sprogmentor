@@ -16,18 +16,22 @@ class _TransportPageState extends State<TransportPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.indigoAccent,
+        leading: IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back_ios, color: Colors.white,),),
+      ),
       body: ListView(
         shrinkWrap: true,
         padding: EdgeInsets.zero,
         children: [
           Container(
             color: Colors.indigoAccent,
-            height: MediaQuery.of(context).size.height / 4,
+            height: MediaQuery.of(context).size.height / 4.5,
             child: ListView(
               physics: const NeverScrollableScrollPhysics(),
               children: [
                 Container(
-                    padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 12, bottom: MediaQuery.of(context).size.height / 25),
+                    padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 10, bottom: MediaQuery.of(context).size.height / 25),
                     child: const Center(child: Text("Transport", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),))),
                 Container(
                   height: MediaQuery.of(context).size.height,

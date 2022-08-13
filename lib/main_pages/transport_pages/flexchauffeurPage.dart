@@ -11,6 +11,11 @@ class _FlexChauffeurPageState extends State<FlexChauffeurPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.indigoAccent,
+        toolbarHeight: kToolbarHeight + 2,
+        leading: IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back_ios, color: Colors.white,),),
+      ),
       body: ListView(
         shrinkWrap: true,
         padding: EdgeInsets.zero,

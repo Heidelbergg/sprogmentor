@@ -27,29 +27,23 @@ class _BusPageState extends State<BusPage> {
       ),
       body: ListView(
         shrinkWrap: true,
+        physics: ClampingScrollPhysics(),
         padding: EdgeInsets.zero,
         children: [
           Container(
-            color: Colors.indigoAccent,
-            height: MediaQuery.of(context).size.height / 2,
-            child: ListView(
-              physics: const NeverScrollableScrollPhysics(),
-              children: [
-                Container(
-                    padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 4, bottom: MediaQuery.of(context).size.height / 8),
-                    child: const Center(child: Text("Buschauffør", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),))),
-                Container(
-                  height: MediaQuery.of(context).size.height,
-                  decoration: BoxDecoration(
-                      color: const Color(0xFFF3F5F7),
-                      borderRadius: BorderRadius.circular(30)
-                  ),
-                ),
-              ],
+            decoration: BoxDecoration(
+              color: Colors.indigoAccent,
+              border: Border.all(
+                width: 3,
+                color: Colors.transparent,
+                style: BorderStyle.solid,
+              ),
+              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(25), bottomRight: Radius.circular(25))
             ),
-          ),
+            padding: EdgeInsets.only(top: MediaQuery.of(context).size.height / 20, bottom: MediaQuery.of(context).size.height / 8),
+              child: const Center(child: Text("Buschauffør", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),))),
           Container(
-            padding: EdgeInsets.only(left: 15, bottom: 15),
+            padding: EdgeInsets.only(left: 15, bottom: 15, top: 25),
             child: Text("Denne side indeholder flere forskellige udtryk som en buschauffør vil blive udsat for i sit daglige virke.", style: TextStyle(color: Colors.grey),),
           ),
           ExpansionTile(leading: Icon(Icons.info_outline), title: Text("Buschauffør"), subtitle: Text("Hvad er en buschauffør?"),children: <Widget>[ListTile(title: Text('Information omkring buschauffør.')),],),
